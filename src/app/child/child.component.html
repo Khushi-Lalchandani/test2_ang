@@ -1,0 +1,12 @@
+<label>Text color picker</label>
+<input type="color" class="form-control styling" [(ngModel)]="textColor" />
+<label>Background color picker</label>
+<input
+  type="color"
+  class="form-control styling"
+  [(ngModel)]="backgroundColor"
+/>
+
+<button class="btn btn-primary" style="margin-top: 20px" (click)="emitEvent()">
+  Send info
+</button>

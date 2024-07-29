@@ -1,0 +1,11 @@
+label {
+  margin-top: 20px;
+}
+.styling {
+  border: 1px double #ffe;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.styling:hover {
+  border: 1px double rgb(183, 108, 211);
+}

@@ -6,8 +6,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent {
-  textColor: string;
-  backgroundColor: string;
+  textColor: string = '';
+  backgroundColor: string = '';
 
   @Output() infoGathered = new EventEmitter<{
     textColor: string;

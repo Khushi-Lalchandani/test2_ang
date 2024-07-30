@@ -6,7 +6,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild('changeProperties', { static: true }) changeProperty: ElementRef;
+  @ViewChild('changeProperties', { static: true }) changeProperty!: ElementRef;
 
   constructor() {}
   ngOnInit() {
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     this.changeProperty.nativeElement.style.color = 'black';
     this.changeProperty.nativeElement.style.backgroundColor = 'pink';
   }
-  applyChanges(data: {}) {
+  applyChanges(data: { textColor: string; backgroundColor: string }) {
     this.changeProperty.nativeElement.style.color = data['textColor'];
     this.changeProperty.nativeElement.style.backgroundColor =
       data['backgroundColor'];

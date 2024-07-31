@@ -1,12 +1,25 @@
-<label>Text color picker</label>
-<input type="color" class="form-control styling" [(ngModel)]="textColor" />
-<label>Background color picker</label>
-<input
-  type="color"
-  class="form-control styling"
-  [(ngModel)]="backgroundColor"
-/>
+<form>
+  <label>Text color picker</label>
+  <input
+    type="color"
+    class="form-control styling"
+    [(ngModel)]="textColor"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <label>Background color picker</label>
+  <input
+    type="color"
+    class="form-control styling"
+    [(ngModel)]="backgroundColor"
+    [ngModelOptions]="{ standalone: true }"
+  />
 
-<button class="btn btn-success" style="margin-top: 20px" (click)="emitEvent()">
-  Send info
-</button>
+  <button
+    class="btn btn-success"
+    type="submit"
+    style="margin-top: 20px"
+    (click)="emitEvent()"
+  >
+    Send info
+  </button>
+</form>
